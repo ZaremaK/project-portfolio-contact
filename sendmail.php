@@ -7,7 +7,8 @@
 
 	$mail = new PHPMailer(true);
 	$mail->CharSet = 'UTF-8';
-	$mail->setLanguage('us', 'phpmailer/language/');
+	$mail->setLanguage('ua', 'phpmailer/language/');
+	$mail->setLanguage('en', 'phpmailer/language/');
 	$mail->IsHTML(true);
 
 
@@ -16,7 +17,7 @@
 	$mail->Subject = 'Contact work';
 
 
-	$body = '<h1>Встречайте супер письмо!</h1>';
+
 	
 	if(trim(!empty($_POST['name']))){
 		$body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
